@@ -7,3 +7,5 @@ lspconfig.qmlls.setup({
 })
 
 vim.opt.mouse = "a"
+vim.opt.number = true
+vim.opt.relativenumber = false

@@ -7,8 +7,8 @@ return {
         enabled = true,
         auto_trigger = true,
         keymap = {
-          accept = "<Tab>",
-          dismiss = "<C-]>",
+          accept = "<C-]>",
+          dismiss = "<C-[>",
         },
       },
       panel = { enabled = true },
