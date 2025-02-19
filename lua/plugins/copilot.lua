@@ -1,8 +1,5 @@
 return {
-  -- disable copilot-cmp
-  { "zbirenbaum/copilot-cmp", enabled = false },
-
-  -- configure copilot.lua
+  { "zbirenbaum/copilot-cmp", enabled = true },
   {
     "zbirenbaum/copilot.lua",
     opts = {
@@ -10,7 +7,8 @@ return {
         enabled = true,
         auto_trigger = true,
         keymap = {
-          accept = "<A-L>",
+          accept = "<Tab>",
+          dismiss = "<C-]>",
         },
       },
       panel = { enabled = true },
