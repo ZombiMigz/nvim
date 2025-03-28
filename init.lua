@@ -10,14 +10,21 @@ vim.opt.mouse = "a"
 vim.opt.number = true
 vim.opt.relativenumber = false
 
+local osc52 = require("vim.ui.clipboard.osc52")
+vim.keymap.set("v", "y", '"+y', { noremap = true })
+vim.keymap.set("n", "p", '"+p', { noremap = true })
 vim.g.clipboard = {
   name = "OSC 52",
   copy = {
-    ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
-    ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+    ["+"] = osc52.copy("+"),
+    ["*"] = osc52.copy("*"),
   },
   paste = {
-    ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
-    ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+    ["+"] = function()
+      return { "" }
+    end,
+    ["*"] = function()
+      return { "" }
+    end,
   },
 }
