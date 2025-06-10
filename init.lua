@@ -18,19 +18,8 @@ vim.opt.mouse = "a"
 vim.opt.number = true
 vim.opt.relativenumber = false
 
--- Use system clipboard by default
-vim.opt.clipboard = "unnamedplus"
--- Enable yanking to system clipboard
-local osc52 = require("vim.ui.clipboard.osc52")
-vim.keymap.set("v", "y", function()
-  -- First yank to the unnamed register
-  vim.cmd("normal! y")
-  -- Now also yank to the system clipboard
-  local content = vim.fn.getreg('"')
-  vim.fn.setreg("+", content)
-  vim.fn.setreg("*", content)
-end, { noremap = true })
 -- Add OSC 52 support
+local osc52 = require("vim.ui.clipboard.osc52")
 vim.g.clipboard = {
   name = "OSC 52",
   copy = {
