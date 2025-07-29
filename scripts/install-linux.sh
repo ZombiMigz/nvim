@@ -9,7 +9,7 @@ curl https://mise.run | sh
 
 # Add mise to bashrc and source it
 if ! grep -q 'eval "$(.*mise activate bash)"' ~/.bashrc; then
-    echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
+  echo 'eval "$(~/.local/bin/mise activate bash)"' >>~/.bashrc
 fi
 eval "$(~/.local/bin/mise activate bash)"
 
@@ -31,3 +31,5 @@ LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/re
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit -D -t /usr/local/bin/
+mkdir -p ~/.config/lazygit/
+touch ~/.config/lazygit/config.yml
