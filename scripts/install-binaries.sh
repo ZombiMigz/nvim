@@ -6,7 +6,7 @@ curl -L https://github.com/minos-org/minos-static/raw/master/static-get -o stati
 chmod +x static-get
 
 # Create directories for organized extraction
-mkdir -p static-downloads/make static-downloads/autoconf static-downloads/git
+mkdir -p static-downloads/make static-downloads/autoconf static-downloads/git static-downloads/unzip
 
 # Setup Make
 ./static-get make
@@ -22,3 +22,8 @@ sudo cp ./static-downloads/autoconf/usr/bin/* /usr/bin/
 ./static-get git
 tar -xf git-*.tar.xz -C ./static-downloads/git
 sudo cp ./static-downloads/git/bin/git /usr/bin/
+
+# Setup unzip
+./static-get unzip
+tar -xf unzip60-*.tar.xz -C ./static-downloads/unzip
+sudo cp ./static-downloads/unzip/usr/bin /usr/bin/
