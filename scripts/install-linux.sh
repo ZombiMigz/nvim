@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Dependencies
-sudo apt-get update
-sudo apt install unzip
-
 # Install mise
 curl https://mise.run | sh
 
