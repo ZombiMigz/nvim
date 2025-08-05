@@ -20,11 +20,11 @@ export CC="zig cc"
 export CXX="zig c++"
 # Import GPG keys for make verification
 gpg --keyserver keyserver.ubuntu.com --recv-keys 96B047156338B6D4 80CB727A20C79BB2
-mise use -g make@latest
 mise use -g node@latest
 mise use -g python@latest
 mise use -g poetry@latest
 mise use -g terraform@latest
+mise use -g neovim@latest
 
 # Install LazyGit
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
