@@ -70,3 +70,9 @@ curl -L -o git-debian.deb https://archive.debian.org/debian/pool/main/g/git/git_
 ar x git-debian.deb
 tar -xf data.tar.xz
 sudo cp -r usr/* /usr/
+
+# Setup SSH
+curl -L -o openssh-client.deb http://archive.debian.org/debian-archive/debian/pool/main/o/openssh/openssh-client_8.4p1-5+deb11u3_amd64.deb
+ar x openssh-client.deb
+tar -xf data.tar.xz
+sudo cp -r usr/bin/* /usr/bin
