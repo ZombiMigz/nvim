@@ -71,15 +71,23 @@ ar x git-debian.deb
 tar -xf data.tar.xz
 sudo cp -r usr/* /usr/
 
-# Setup OpenSSL (for libcrypto.so.1.1)
+# Setup SSH
+mkdir -p /tmp/ssh
+cd /tmp/ssh
 curl -L -o libssl1.1.deb http://archive.debian.org/debian/pool/main/o/openssl/libssl1.1_1.1.1w-0+deb11u1_amd64.deb
 ar x libssl1.1.deb
 tar -xf data.tar.xz
 sudo cp usr/lib/x86_64-linux-gnu/libssl.so.* /usr/lib/
 sudo cp usr/lib/x86_64-linux-gnu/libcrypto.so.* /usr/lib/
 
-# Setup SSH
 curl -L -o openssh-client.deb http://archive.debian.org/debian-archive/debian/pool/main/o/openssh/openssh-client_8.4p1-5+deb11u3_amd64.deb
 ar x openssh-client.deb
 tar -xf data.tar.xz
 sudo cp -r usr/bin/* /usr/bin
+
+mkdir -p /tmp/selinux
+cd /tmp/selinux
+curl -L -o libselinux1.deb http://deb.debian.org/debian/pool/main/libs/libselinux/libselinux1_3.4-1+b6_amd64.deb
+ar x libselinux1.deb
+tar -xf data.tar.xz
+sudo cp usr/lib/x86_64-linux-gnu/libselinux.so.* /usr/lib/
