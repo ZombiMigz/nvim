@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Download static-get
 cd /tmp/
 curl -L https://github.com/minos-org/minos-static/raw/master/static-get -o static-get
@@ -21,7 +23,7 @@ sudo cp ./static-downloads/autoconf/usr/bin/* /usr/bin/
 # Setup unzip
 ./static-get unzip
 tar -xf unzip60-*.tar.xz -C ./static-downloads/unzip
-sudo cp ./static-downloads/unzip/usr/bin /usr/bin/
+sudo cp -r ./static-downloads/unzip/usr/bin /usr/bin/
 
 # Setup Ar
 mkdir -p static-downloads/binutils
