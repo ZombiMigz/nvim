@@ -85,9 +85,7 @@ ar x openssh-client.deb
 tar -xf data.tar.xz
 sudo cp -r usr/bin/* /usr/bin
 
-mkdir -p /tmp/selinux
-cd /tmp/selinux
 curl -L -o libselinux1.deb http://deb.debian.org/debian/pool/main/libs/libselinux/libselinux1_3.4-1+b6_amd64.deb
 ar x libselinux1.deb
 tar -xf data.tar.xz
-sudo cp usr/lib/x86_64-linux-gnu/libselinux.so.* /usr/lib/
+sudo cp lib/x86_64-linux-gnu/libselinux.so.* /usr/lib/
