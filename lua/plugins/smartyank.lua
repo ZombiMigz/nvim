@@ -4,7 +4,7 @@ return {
     require("smartyank").setup({
       osc52 = {
         enabled = true,
-        ssh_only = false,
+        ssh_only = true,
       },
     })
   end,
