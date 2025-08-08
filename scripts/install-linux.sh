@@ -23,3 +23,4 @@ mise use -g poetry@latest
 mise use -g terraform@latest
 mise use -g neovim@latest
 mise use -g lazygit@latest
+mise use -g ripgrep@latest
