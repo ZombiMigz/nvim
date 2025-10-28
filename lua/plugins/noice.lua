@@ -1,5 +1,5 @@
 return {
-  { "ibhagwan/fzf-lua", dependencies = { "echasnovski/mini.icons" } },
+  { "ibhagwan/fzf-lua", dependencies = { "nvim-mini/mini.icons" } },
   {
     "folke/noice.nvim",
     event = "VeryLazy",
