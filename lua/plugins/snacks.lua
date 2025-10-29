@@ -14,6 +14,8 @@ return {
       scroll = { enabled = true },
       -- explorer = { enabled = true },
       -- statuscolumn = { enabled = true },
+      notify = { enabled = true },
+      notifier = { enabled = true },
     },
     -- keys = {
     --   -- Top Pickers & Explorer
