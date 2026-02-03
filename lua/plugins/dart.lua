@@ -5,7 +5,7 @@ return {
     ui = {
       -- border = "rounded",
     },
-    flutter_lookup_cmd = "asdf where flutter",
+    flutter_lookup_cmd = "mise where flutter",
     lsp = {
       color = {
         -- enabled = true,
